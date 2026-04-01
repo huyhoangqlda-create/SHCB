@@ -24,7 +24,6 @@ function App() {
       <aside className="w-full md:w-64 bg-red-800 text-white flex flex-col shadow-lg z-10 md:min-h-screen">
         <div className="p-4 flex items-center justify-between md:justify-center border-b border-red-700">
           <h1 className="text-xl font-bold text-center flex items-center gap-2">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_the_Communist_Party_of_Vietnam.svg/220px-Flag_of_the_Communist_Party_of_Vietnam.svg.png" alt="Đảng kỳ" className="w-8 h-8 object-contain" />
             Trợ lý Chi bộ
           </h1>
           <button className="md:hidden p-1 hover:bg-red-700 rounded" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -57,14 +56,17 @@ function App() {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 p-4 md:p-8 overflow-y-auto h-screen">
-        <div className="max-w-5xl mx-auto pb-12">
+      <main className="flex-1 p-4 md:p-8 overflow-y-auto h-screen flex flex-col">
+        <div className="max-w-5xl mx-auto pb-12 flex-1 w-full">
           {activeTab === 'guide' && <MeetingGuide />}
           {activeTab === 'planner' && <MeetingPlanner />}
           {activeTab === 'autodraft' && <AutoDraft />}
           {activeTab === 'evaluation' && <QualityEvaluation />}
           {activeTab === 'handbook' && <ContentHandbook />}
         </div>
+        <footer className="text-center pt-6 pb-2 text-slate-500 text-sm mt-auto border-t border-slate-200 max-w-5xl mx-auto w-full">
+          Đỗ Huy Hoàng - HĐND phường Tân Tiến, tỉnh Bắc Ninh
+        </footer>
       </main>
     </div>
   );
