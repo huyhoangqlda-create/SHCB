@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { BookOpen, Calendar, CheckSquare, FileText, Menu, X, Sparkles } from 'lucide-react';
 import MeetingGuide from './components/MeetingGuide';
-import MeetingPlanner from './components/MeetingPlanner';
 import QualityEvaluation from './components/QualityEvaluation';
 import ContentHandbook from './components/ContentHandbook';
 import AutoDraft from './components/AutoDraft';
@@ -12,7 +11,6 @@ function App() {
 
   const tabs = [
     { id: 'guide', name: 'Hướng dẫn Sinh hoạt', icon: BookOpen },
-    { id: 'planner', name: 'Lên kế hoạch', icon: Calendar },
     { id: 'autodraft', name: 'Trợ lý AI Dự thảo', icon: Sparkles },
     { id: 'evaluation', name: 'Đánh giá Chất lượng', icon: CheckSquare },
     { id: 'handbook', name: 'Sổ tay Nội dung', icon: FileText },
@@ -59,7 +57,6 @@ function App() {
       <main className="flex-1 p-4 md:p-8 overflow-y-auto h-screen flex flex-col">
         <div className="max-w-5xl mx-auto pb-12 flex-1 w-full">
           {activeTab === 'guide' && <MeetingGuide />}
-          {activeTab === 'planner' && <MeetingPlanner />}
           {activeTab === 'autodraft' && <AutoDraft />}
           {activeTab === 'evaluation' && <QualityEvaluation />}
           {activeTab === 'handbook' && <ContentHandbook />}
